@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SINCRO-MENTE</title>
+    <link rel="stylesheet" href="Estilo.css">
+</head>
+<body>
+
+<div id="welcome-screen">
+    <div class="album-cover">
+        <div class="album-spine"></div>
+        <div class="album-content">
+            <p class="serial-number">Pensamiento creativo</p>
+            <div class="main-art">
+                <div class="circuit-circle">
+                    <span class="brain-icon">🧠</span>
+                </div>
+            </div>
+            <h1 class="album-title">SINCRO<span>MENTE</span></h1>
+            <button class="play-button" onclick="showSetup()">
+                <span class="play-icon">▶</span> INICIAR JUEGO
+            </button>
+        </div>
+    </div>
+</div>
+
+<header>
+    <h1>SINCRO-MENTE</h1>
+    <p>Simulador de Habilidades de Pensamiento</p>
+</header>
+
+<div id="setup-screen">
+    <h3>Registro de Equipo</h3>
+    <div id="name-inputs">
+        <div class="input-group"><label>Integrante 1:</label><input type="text" id="name1" placeholder="Nombre..."></div>
+        <div class="input-group"><label>Integrante 2:</label><input type="text" id="name2" placeholder="Nombre..."></div>
+        <div class="input-group"><label>Integrante 3:</label><input type="text" id="name3" placeholder="Nombre..."></div>
+        <div class="input-group"><label>Integrante 4:</label><input type="text" id="name4" placeholder="Nombre..."></div>
+        <div class="input-group"><label>Integrante 5:</label><input type="text" id="name5" placeholder="Nombre..."></div>
+        <div class="input-group"><label>Integrante 6:</label><input type="text" id="name6" placeholder="Nombre..."></div>
+        <div class="input-group"><label>Integrante 7:</label><input type="text" id="name7" placeholder="Nombre..."></div>
+    </div>
+    <button class="main-btn" onclick="startGame()">INICIAR PARTIDA</button>
+</div>
+
+<div id="game-screen">
+    <div class="main-layout">
+        <div class="control-panel">
+            <div id="turn-indicator" class="p1" style="padding: 15px; border-radius: 10px; color: white; font-weight: bold; margin-bottom: 10px;">
+                Turno de: <br><span id="current-name">---</span>
+            </div>
+            <div id="dice-val" style="font-size: 4rem; margin: 10px;">🎲</div>
+            <button id="roll-btn" class="main-btn" onclick="startTurn()">LANZAR DADO</button>
+            <div id="deck-info" style="margin-top:20px; font-weight: bold; color: var(--primary);">Preguntas en mazo: 80</div>
+        </div>
+        <div class="board" id="board"></div>
+    </div>
+</div>
+
+<div class="overlay" id="overlay"></div>
+<div class="modal" id="q-modal">
+    <h4 id="q-category" style="margin:0; color: var(--primary); text-transform: uppercase;"></h4>
+    <div class="timer-bg"><div id="timer-fill"></div></div>
+    <p id="q-text" style="font-size: 1.1rem; font-weight: bold; margin: 15px 0;"></p>
+    <div id="options-container"></div>
+</div>
+
+<script src="funcionabilidad.js"></script>
+
+</body>
+</html>
